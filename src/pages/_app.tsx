@@ -11,19 +11,18 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>ARAM Auto Random Pick</title>
+        <title>ARAM Random Picker</title>
       </Head>
       <nav className="fixed top-0 left-0 right-0 flex items-center justify-between flex-wrap bg-purple-500 p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Link href="/">
-            <span className="font-semibold text-xl tracking-tight cursor-pointer">ARAM Auto Random Pick</span>
+            <span className="font-semibold text-xl tracking-tight cursor-pointer">ARAM Random Picker</span>
           </Link>
         </div>
       </nav>
       <div className="min-h-screen pb-16 pt-20">
         <Component {...pageProps} />
       </div>
-      {/* 푸터를 화면 하단에 고정합니다. */}
       <div className="fixed bottom-0 inset-x-0 h-4 bg-purple-500 h-10"></div>
     </>
   )

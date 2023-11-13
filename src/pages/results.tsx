@@ -72,7 +72,7 @@ export default function Results() {
 
     return (
         <div className="container mx-auto px-4 py-12 pb-12">
-            <h1 className="text-5xl font-bold text-center text-gray-800 mb-6">Champion Selection Results</h1>
+            <h1 className="text-5xl font-bold text-center text-gray-800 mb-6">Champion Random Pick Results</h1>
             {isRedTeamVisible && (
                 <div className="mb-8">
                     <h2 className="text-3xl font-semibold text-center text-gray-700 mb-4 text-red-600">Red Team</h2>

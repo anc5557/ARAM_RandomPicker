@@ -17,7 +17,7 @@ export default function Settings() {
     };
 
     return (
-        <div className="container mx-auto px-4 py-12 pb-10"> 
+        <div className="container mx-auto px-4 py-12 pb-10 pt-40"> 
             <h1 className="text-4xl font-bold text-center mb-16">Setting</h1>
             <p className="text-center text-lg  mb-5">
                 Randomly pick champions for each team based on the number of team members and the number of dice.
@@ -29,7 +29,7 @@ export default function Settings() {
                 {['dice', 'redTeam', 'blueTeam'].map((team, index) => (
                     <div className="w-1/5" key={index}>
                         <label htmlFor={`${team}Count`} className="block text-sm font-medium text-gray-700">
-                            {team === 'dice' ? 'Number of dice' : team === 'redTeam' ? <span style={{ color: 'red' }}>Red Team Count</span> : <span style={{ color: 'blue' }}>Blue Team Count</span>}
+                            {team === 'dice' ? 'Number of dice' : team === 'redTeam' ? <span style={{ color: 'red' }}>Red Team</span> : <span style={{ color: 'blue' }}>Blue Team</span>}
                         </label>
                         <input
                             type="number"
