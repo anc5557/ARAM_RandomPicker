@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { version } from '../data/lol_data';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Results() {
     const router = useRouter();
@@ -13,9 +15,10 @@ export default function Results() {
     // URL 복사 기능을 위한 핸들러 함수들
     const copyToClipboard = (text: string) => {
         navigator.clipboard.writeText(text).then(() => {
-            alert('URL copied to clipboard!');
+            toast.success('URL copied to clipboard!');
         }).catch(err => {
             console.error('Could not copy text: ', err);
+            toast.error('Failed to copy URL to clipboard.');
         });
     };
 
@@ -117,7 +120,6 @@ export default function Results() {
                     </button>
                 </div>
             )}
-
         </div>
     );
 }

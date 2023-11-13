@@ -1,6 +1,8 @@
 // path : src/pages/settings.tsx
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Settings() {
     const [redTeamCount, setRedTeamCount] = useState(5);
@@ -12,7 +14,7 @@ export default function Settings() {
         if (diceCount >= 0 && diceCount <= 2 && redTeamCount >= 1 && redTeamCount <= 5 && blueTeamCount >= 1 && blueTeamCount <= 5) {
             router.push(`/processing?dice=${diceCount}&redTeam=${redTeamCount}&blueTeam=${blueTeamCount}`);
         } else {
-            alert('Please enter a valid number of dice and team members.');
+            toast.success('Please enter a valid number of dice and team members.');
         }
     };
 

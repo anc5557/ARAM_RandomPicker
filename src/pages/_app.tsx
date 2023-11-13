@@ -6,6 +6,7 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import Link from 'next/link'
 import 'tailwindcss/tailwind.css'
+import { ToastContainer } from 'react-toastify'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -24,6 +25,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <Component {...pageProps} />
       </div>
       <div className="fixed bottom-0 inset-x-0 h-14 bg-purple-500 "></div>
+      <ToastContainer />
     </>
   )
 }
