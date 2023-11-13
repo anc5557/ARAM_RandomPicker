@@ -16,11 +16,16 @@ const App = ({ Component, pageProps }: AppProps) => {
       <nav className="flex items-center justify-between flex-wrap bg-purple-500 p-6">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Link href="/">
-            <span className="font-semibold text-xl tracking-tight ">ARAM Auto Random Pick</span>
+            <span className="font-semibold text-xl tracking-tight cursor-pointer">ARAM Auto Random Pick</span>
           </Link>
         </div>
       </nav>
-      <Component {...pageProps} />
+      {/* 메인 컨텐츠에 pb-16을 추가하여 푸터와의 간격을 만듭니다. */}
+      <div className="min-h-screen pb-16">
+        <Component {...pageProps} />
+      </div>
+      {/* 푸터를 화면 하단에 고정합니다. */}
+      <div className="fixed bottom-0 inset-x-0 h-4 bg-purple-500 h-10"></div>
     </>
   )
 }
