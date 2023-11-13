@@ -13,7 +13,7 @@ export default function Home() {
 
     return (
         <div className="container mx-auto px-4 py-12 flex flex-col items-center pb-10 pt-40">
-            <h1 className="text-5xl font-bold text-center text-gray-800 mb-3">ARAM</h1> 
+            <h1 className="text-5xl font-bold text-center text-gray-800 mb-3">ARAM</h1>
             <h1 className="text-5xl font-bold text-center text-gray-800 mb-16">Random Picker</h1>
             <p className="text-base text-gray-600 text-center mb-4 ">Random picks are not supported in private room.</p>
             <p className="text-base text-gray-600 text-center mb-4">This website supports random picks.</p>
