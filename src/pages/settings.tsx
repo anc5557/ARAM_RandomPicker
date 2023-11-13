@@ -23,7 +23,7 @@ export default function Settings() {
                 Randomly pick champions for each team based on the number of team members and the number of dice.
             </p>
             <p className="text-center text-lg  mb-20">
-                Number of champions on each team = (number of team members + 1) * dice number
+                Number of champions on each team = (number of team members + 1) * number of dice
             </p>
             <div className="flex justify-center space-x-6">
                 {['dice', 'redTeam', 'blueTeam'].map((team, index) => (
