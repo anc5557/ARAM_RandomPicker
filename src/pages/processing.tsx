@@ -8,7 +8,7 @@ export default function Processing() {
 
   useEffect(() => {
     async function selectAndRedirect() {
-      // 챔피언 데이터를 가져옵니다.
+    // 챔피언 데이터를 가져옵니다.
     const champions = await fetchChampionData();
     // 라우터 쿼리에서 팀원 수와 주사위 수를 가져옵니다.
     const redTeamCount = Number(router.query.redTeam) || 5;
