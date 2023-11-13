@@ -1,3 +1,4 @@
+// path : src/pages/processing.tsx
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { fetchChampionData } from '../data/lol_data';

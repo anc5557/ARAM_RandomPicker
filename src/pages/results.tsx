@@ -1,3 +1,4 @@
+//path : src/pages/results.tsx
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { version } from '../data/lol_data';
