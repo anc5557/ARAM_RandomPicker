@@ -23,7 +23,8 @@ export default function Processing() {
     const blueTeamQuery = encodeURIComponent(selectedBlueTeam.map(champion => champion.name).join(','));
 
     // Results 페이지로 리다이렉트합니다.
-    router.push(`/results?redTeam=${redTeamQuery}&blueTeam=${blueTeamQuery}`);
+    router.replace(`/results?redTeam=${redTeamQuery}&blueTeam=${blueTeamQuery}`);
+
     }
 
     if (router.isReady) {
@@ -59,8 +60,8 @@ function selectChampionsForTeams(allChampions: Array<{ name: string }>, redTeamS
   }
 
   return (
-    <div>
-      <h1>Processing...</h1>
+    <div className="flex items-center justify-center h-screen">
+      <h1 className="text-3xl font-semibold">Processing...</h1>
     </div>
   );
 }

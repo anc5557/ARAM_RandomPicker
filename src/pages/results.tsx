@@ -33,35 +33,48 @@ export default function Results() {
         };
     }, [router]);
 
+    const handleRedraw = () => {
+        // 사용자가 다시 뽑기를 원할 경우 설정 페이지로 리디렉션
+        router.push('/settings');
+    };
+
+
     // 챔피언 이미지 URL을 생성하는 함수
     const getChampionImageUrl = (championName: string, version: string) => {
         return `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${championName}.png`;
     };
 
     return (
-        <div>
-            <h1>Champion Selection Results</h1>
-            <div>
-                <h2>Red Team</h2>
-                <div style={{ display: 'flex' }}>
+        <div className="container mx-auto px-4 py-12">
+            <h1 className="text-5xl font-bold text-center text-gray-800 mb-6">Champion Selection Results</h1>
+            <div className="mb-8">
+                <h2 className="text-3xl font-semibold text-center text-gray-700 mb-4 text-red-600">Red Team</h2>
+                <div className="flex justify-center items-center flex-wrap gap-6">
                     {redTeam.map((champion, index) => (
-                        <div key={index} style={{ textAlign: 'center', margin: '0 10px' }}>
-                            <img src={getChampionImageUrl(champion, version)} alt={champion} style={{ width: '100px' }} />
-                            <p>{champion}</p>
+                        <div key={index} className="text-center">
+                            <img src={getChampionImageUrl(champion, version)} alt={champion} className="w-24 h-24 object-cover mx-auto" />
+                            <p className="text-gray-700 mt-2">{champion}</p>
                         </div>
                     ))}
                 </div>
             </div>
             <div>
-                <h2>Blue Team</h2>
-                <div style={{ display: 'flex' }}>
+                <h2 className="text-3xl font-semibold text-center text-gray-700 mb-4 text-blue-600">Blue Team</h2>
+                <div className="flex justify-center items-center flex-wrap gap-6">
                     {blueTeam.map((champion, index) => (
-                        <div key={index} style={{ textAlign: 'center', margin: '0 10px' }}>
-                            <img src={getChampionImageUrl(champion, version)} alt={champion} style={{ width: '100px' }} />
-                            <p>{champion}</p>
+                        <div key={index} className="text-center">
+                            <img src={getChampionImageUrl(champion, version)} alt={champion} className="w-24 h-24 object-cover mx-auto" />
+                            <p className="text-gray-700 mt-2">{champion}</p>
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="flex justify-center">
+                <button
+                    onClick={handleRedraw}
+                    className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-6 mt-10 rounded-lg text-xl focus:outline-none focus:shadow-outline">
+                    Redraw
+                </button>
             </div>
         </div>
     );
