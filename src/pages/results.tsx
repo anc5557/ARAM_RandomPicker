@@ -15,6 +15,23 @@ export default function Results() {
         setBlueTeam(blueTeamNames);
     }, [router.query]);
 
+    useEffect(() => {
+        // 브라우저의 뒤로 가기 버튼을 눌렀을 때의 동작을 제어합니다.
+        const handleBeforePopState = () => {
+            // 설정 페이지(`/settings`)로 리디렉션합니다.
+            router.push('/settings');
+            return false;
+        };
+
+        // beforePopState 이벤트 리스너를 설정합니다.
+        router.beforePopState(handleBeforePopState);
+
+        // 컴포넌트가 언마운트 될 때 이벤트 리스너를 제거합니다.
+        return () => {
+            router.beforePopState(() => true);
+        };
+    }, [router]);
+
     // 챔피언 이미지 URL을 생성하는 함수
     const getChampionImageUrl = (championName: string, version: string) => {
         return `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${championName}.png`;
