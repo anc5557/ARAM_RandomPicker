@@ -75,7 +75,7 @@ export default function Results() {
             <h1 className="text-5xl font-bold text-center text-gray-800 mb-6">Champion Random Pick Results</h1>
             {isRedTeamVisible && (
                 <div className="mb-8">
-                    <h2 className="text-3xl font-semibold text-center text-gray-700 mb-4 text-red-600">Red Team</h2>
+                    <h2 className="text-3xl font-semibold text-center mb-4 text-red-600">Red Team</h2>
                     <div className="flex justify-center items-center flex-wrap gap-6">
                         {redTeam.map((champion, index) => (
                             <div key={index} className="text-center">
@@ -89,7 +89,7 @@ export default function Results() {
 
             {isBlueTeamVisible && (
                 <div>
-                    <h2 className="text-3xl font-semibold text-center text-gray-700 mb-4 text-blue-600">Blue Team</h2>
+                    <h2 className="text-3xl font-semibold text-center mb-4 text-blue-600">Blue Team</h2>
                     <div className="flex justify-center items-center flex-wrap gap-6">
                         {blueTeam.map((champion, index) => (
                             <div key={index} className="text-center">
@@ -102,7 +102,7 @@ export default function Results() {
             )}
 
             {isRedTeamVisible && isBlueTeamVisible && (
-                <div className="flex justify-center space-x-4 mt-10">
+                <div className="flex justify-center space-x-4 mt-8">
                     <button onClick={handleRedraw} className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                         Restart
                     </button>

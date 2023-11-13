@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <div className="min-h-screen pb-16 pt-20">
         <Component {...pageProps} />
       </div>
-      <div className="fixed bottom-0 inset-x-0 h-4 bg-purple-500 h-10"></div>
+      <div className="fixed bottom-0 inset-x-0 h-4 bg-purple-500 h-14"></div>
     </>
   )
 }
