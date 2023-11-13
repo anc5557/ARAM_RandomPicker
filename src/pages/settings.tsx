@@ -8,21 +8,19 @@ export default function Settings() {
     const router = useRouter();
 
     const handleSubmit = () => {
-        // 주사위 개수와 팀 인원 수가 올바른 범위 내에 있는지 확인합니다.
         if (diceCount >= 0 && diceCount <= 2 && redTeamCount >= 1 && redTeamCount <= 5 && blueTeamCount >= 1 && blueTeamCount <= 5) {
             router.push(`/processing?dice=${diceCount}&redTeam=${redTeamCount}&blueTeam=${blueTeamCount}`);
         } else {
-            // 올바르지 않은 입력값에 대한 처리를 여기서 합니다.
-            alert('입력값이 범위를 벗어났습니다. 다시 확인해 주세요.');
+            alert('Please enter a valid number of dice and team members.');
         }
     };
 
 
     return (
         <div>
-            <h1>팀 설정</h1>
+            <h1>SETTING</h1>
             <div>
-                <label htmlFor="diceCount">주사위 개수:</label>
+                <label htmlFor="diceCount">number of dice:</label>
                 <input
                     type="number"
                     value={diceCount}
@@ -31,7 +29,7 @@ export default function Settings() {
                 />
             </div>
             <div>
-                <label htmlFor="redTeamCount">Red 팀 인원 수:</label>
+                <label htmlFor="redTeamCount">Red Team: </label>
                 <input
                     type="number"
                     id="redTeamCount"
@@ -41,7 +39,7 @@ export default function Settings() {
                 />
             </div>
             <div>
-                <label htmlFor="blueTeamCount">Blue 팀 인원 수:</label>
+                <label htmlFor="blueTeamCount">Blue Team: </label>
                 <input
                     type="number"
                     id="blueTeamCount"
@@ -50,7 +48,7 @@ export default function Settings() {
                     min={1} max={5}
                 />
             </div>
-            <button onClick={handleSubmit}>확인</button>
+            <button onClick={handleSubmit}>Pick!!</button>
         </div>
     );
 }

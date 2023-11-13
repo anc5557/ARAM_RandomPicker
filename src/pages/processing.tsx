@@ -57,5 +57,9 @@ function selectChampionsForTeams(allChampions: Array<{ name: string }>, redTeamS
     return { selectedRedTeam, selectedBlueTeam };
   }
 
-  return <div>챔피언을 선택하는 중입니다...</div>;
+  return (
+    <div>
+      <h1>Processing...</h1>
+    </div>
+  );
 }

@@ -10,7 +10,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>칼바람나락 자동픽</title>
+        <title>ARAM Auto Random Pick</title>
       </Head>
       <Component {...pageProps} />
     </>

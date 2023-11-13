@@ -9,8 +9,8 @@ const NotFoundPage: NextPage = () => {
   return (
     <div>
       <h1>404</h1>
-      <p>요청하신 페이지를 찾을 수 없습니다.</p>
-      <button onClick={() => router.push('/')}>홈으로</button>
+      <p> page not found </p>
+      <button onClick={() => router.push('/')}>go back home </button>
     </div>
   )
 }

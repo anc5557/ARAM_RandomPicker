@@ -22,9 +22,9 @@ export default function Results() {
 
     return (
         <div>
-            <h1>챔피언 선택 결과</h1>
+            <h1>Champion Selection Results</h1>
             <div>
-                <h2>Red 팀:</h2>
+                <h2>Red Team</h2>
                 <div style={{ display: 'flex' }}>
                     {redTeam.map((champion, index) => (
                         <div key={index} style={{ textAlign: 'center', margin: '0 10px' }}>
@@ -35,7 +35,7 @@ export default function Results() {
                 </div>
             </div>
             <div>
-                <h2>Blue 팀:</h2>
+                <h2>Blue Team</h2>
                 <div style={{ display: 'flex' }}>
                     {blueTeam.map((champion, index) => (
                         <div key={index} style={{ textAlign: 'center', margin: '0 10px' }}>
