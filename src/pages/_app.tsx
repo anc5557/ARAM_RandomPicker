@@ -20,10 +20,10 @@ const App = ({ Component, pageProps }: AppProps) => {
           </Link>
         </div>
       </nav>
-      <div className="min-h-screen pb-16 pt-20">
+      <div className="min-h-screen pb-16 pt-16">
         <Component {...pageProps} />
       </div>
-      <div className="fixed bottom-0 inset-x-0 h-4 bg-purple-500 h-14"></div>
+      <div className="fixed bottom-0 inset-x-0 h-14 bg-purple-500 "></div>
     </>
   )
 }
