@@ -17,7 +17,7 @@ export default function Home() {
             <h1 className="text-5xl font-bold text-center text-gray-800 mb-16">Random Picker</h1>
             <p className="text-base text-gray-600 text-center mb-4 ">Random picks are not supported in private room.</p>
             <p className="text-base text-gray-600 text-center mb-4">This website supports random picks.</p>
-            <p className="text-base text-gray-600 text-center mb-4">League Of Legends version:
+            <p className="text-base text-gray-600 text-center mb-4">League of Legends version:
                 <span className="text-red-500"> {version} </span>
             </p>
             <p className="text-base text-gray-600 text-center mb-20">To start the random pick, click the button below.</p>
