@@ -3,6 +3,7 @@
 
 import React from 'react'
 import { useRouter } from 'next/router'
+import { version } from '../data/lol_data'
 
 export default function Home() {
     const router = useRouter()
@@ -11,17 +12,19 @@ export default function Home() {
     }
 
     return (
-        <div>
-            <h1>ARAM Auto Random Pick</h1>
-            <p>Random picks are not supported in private room. </p>
-            <p>This website supports random picks.</p>
-            <p>league of legends version :
-                <span className="text-red-500"> 11.12 </span>
+        <div className="container mx-auto px-4 py-12 flex flex-col items-center">
+            <h1 className="text-5xl font-bold text-center text-gray-800 mb-3">ARAM</h1> 
+            <h1 className="text-5xl font-bold text-center text-gray-800 mb-16">Auto Random Pick</h1>
+            <p className="text-base text-gray-600 text-center mb-4 ">Random picks are not supported in private room.</p>
+            <p className="text-base text-gray-600 text-center mb-4">This website supports random picks.</p>
+            <p className="text-base text-gray-600 text-center mb-4">League Of Legends version:
+                <span className="text-red-500"> {version} </span>
             </p>
-            <p>To start the random pick, click the button below.</p>
-            <button onClick={handleStartClick} className="bg-blue-500 hover:bg-blue-7 00 text-white font-bold py-2 px-4 rounded">
+            <p className="text-base text-gray-600 text-center mb-20">To start the random pick, click the button below.</p>
+            <button onClick={handleStartClick} className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out flex justify-center">
                 START
             </button>
         </div>
+
     )
 }
