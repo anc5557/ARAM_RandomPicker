@@ -8,7 +8,7 @@ import Select from 'react-select';
 export default function Settings() {
     const [redTeamCount, setRedTeamCount] = useState(5);
     const [blueTeamCount, setBlueTeamCount] = useState(5);
-    const [diceCount, setDiceCount] = useState(2);
+    const [diceCount, setDiceCount] = useState(0); // 다이스 기본값 0으로 변경
     const router = useRouter();
 
     const diceOptions = [
