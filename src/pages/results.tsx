@@ -74,11 +74,11 @@ export default function Results() {
     };
 
     return (
-        <div className="container mx-auto px-4 py-12 pb-12 mt-6 lg:mt-16">
+        <div className="container mx-auto px-4 py-12 pb-12 mt-6 lg:mt-13">
             <h1 className="text-5xl font-bold text-center text-gray-800 mb-6">Random Pick Results</h1>
             {isRedTeamVisible && (
                 <div className="mb-8">
-                    <h2 className="lg:text-3xl text-xl font-semibold text-center mb-2 text-red-600 lg:mt-16">Red Team</h2>
+                    <h2 className="lg:text-3xl text-xl font-semibold text-center mb-2 text-red-600 lg:mt-10">Red Team</h2>
                     <div className="flex justify-center items-center flex-wrap lg:gap-6 gap-3">
                         {redTeam.map((champion, index) => (
                             <div key={index} className="text-center">
@@ -92,7 +92,7 @@ export default function Results() {
 
             {isBlueTeamVisible && (
                 <div>
-                    <h2 className="lg:text-3xl text-xl font-semibold text-center mb-2 text-blue-600 lg:mt-16">Blue Team</h2>
+                    <h2 className="lg:text-3xl text-xl font-semibold text-center mb-2 text-blue-600 lg:mt-13">Blue Team</h2>
                     <div className="flex justify-center items-center flex-wrap lg:gap-6 gap-3">
                         {blueTeam.map((champion, index) => (
                             <div key={index} className="text-center">
@@ -105,7 +105,7 @@ export default function Results() {
             )}
 
             {isRedTeamVisible && isBlueTeamVisible && (
-                <div className="flex justify-center space-x-4 mt-8 lg:mt-32">
+                <div className="flex justify-center space-x-4 mt-8 lg:mt-16">
                     <button onClick={handleRedraw} className="bg-purple-500 hover:bg-purple-600 text-white lg:text-3xl text-sm font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                         Restart
                     </button>
