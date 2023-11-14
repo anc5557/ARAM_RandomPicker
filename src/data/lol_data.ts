@@ -1,3 +1,4 @@
+// path : aram_pick/src/data/lol_data.ts
 import axios from "axios";
 
 // 버전 정보
@@ -8,6 +9,7 @@ export const championIds: string[] = [];
 
 // Riot Games 챔피언 데이터 JSON을 가져오는 함수입니다.
 export async function fetchChampionData(): Promise<string[]> {
+  const championIds: string[] = []; // 함수 내부로 이동
   const url = `https://ddragon.leagueoflegends.com/cdn/${version}/data/ko_KR/champion.json`;
   try {
     const response = await axios.get(url);
@@ -23,5 +25,5 @@ export async function fetchChampionData(): Promise<string[]> {
     console.error(error);
   }
 
-  return championIds; // 영어 이름 배열을 반환합니다.
+  return championIds; // 새로 생성된 배열을 반환합니다.
 }
