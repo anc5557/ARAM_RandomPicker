@@ -34,20 +34,26 @@ export default function Settings() {
     };
 
     return (
-        <div className="container mx-auto px-4 py-12 pb-10 pt-40">
+        <div className="container mx-auto px-4 py-12 pt-28">
             <h1 className="text-4xl font-bold text-center mb-16">Setting</h1>
-            <p className="text-center text-lg mb-5">
+            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-5">
                 Randomly pick champions for each team based on the number of team members and the number of dice.
             </p>
-            <p className="text-center text-lg mb-5">
-                Number of champions on each team = (number of team members + 1) * number of dice
+            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-2">
+                Number of champions on each team 
             </p>
-            <p className="text-center text-lg mb-20">
-                0 ≤ number of dice ≤ 2, 1 ≤ number of team members ≤ 5
+            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-5">
+                = (number of team members + 1) * number of dice
+            </p>
+            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl">
+                0 ≤ number of dice ≤ 2
+            </p>
+            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-14">
+                1 ≤ number of team members ≤ 5
             </p>
             <div className="flex justify-center space-x-6, mb-10">
-                <div className="w-1/6" style={{ margin: '0 10px' }}>
-                    <label htmlFor="diceCount" className="block text-sm font-medium text-gray-700">
+                <div className="sm:w-1/2 md:w-1/3 lg:w-1/4" style={{ margin: '0 10px' }}>
+                    <label htmlFor="diceCount" className="block text-sm text-center font-medium text-gray-700">
                         Dice
                     </label>
                     <Select
@@ -62,8 +68,8 @@ export default function Settings() {
                         }}
                     />
                 </div>
-                <div className="w-1/6" style={{ margin: '0 10px' }}>
-                    <label htmlFor="redTeamCount" className="block text-sm font-medium text-gray-700" style={{ color: 'red' }}>
+                <div className="sm:w-1/2 md:w-1/3 lg:w-1/4" style={{ margin: '0 10px' }}>
+                    <label htmlFor="redTeamCount" className="block text-sm font-medium  text-center text-gray-700" style={{ color: 'red' }}>
                         Red Team
                     </label>
                     <Select
@@ -78,8 +84,8 @@ export default function Settings() {
                         }}
                     />
                 </div>
-                <div className="w-1/6" style={{ margin: '0 10px' }}>
-                    <label htmlFor="blueTeamCount" className="block text-sm font-medium text-gray-700" style={{ color: 'blue' }}>
+                <div className="sm:w-1/2 md:w-1/3 lg:w-1/4" style={{ margin: '0 10px' }}>
+                    <label htmlFor="blueTeamCount" className="block text-sm font-medium text-center text-gray-700" style={{ color: 'blue' }}>
                         Blue Team
                     </label>
                     <Select
