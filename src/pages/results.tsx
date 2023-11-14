@@ -79,7 +79,7 @@ export default function Results() {
             {isRedTeamVisible && (
                 <div className="mb-8">
                     <h2 className="lg:text-3xl text-xl font-semibold text-center mb-2 text-red-600 lg:mt-10">Red Team</h2>
-                    <div className="flex justify-center items-center flex-wrap lg:gap-6 gap-3">
+                    <div className="flex justify-center items-center flex-wrap lg:gap-5 gap-3">
                         {redTeam.map((champion, index) => (
                             <div key={index} className="text-center">
                                 <img src={getChampionImageUrl(champion, version)} alt={champion} className="lg:w-24 lg:h-24  w-14 h-14 object-cover mx-auto" />
@@ -93,7 +93,7 @@ export default function Results() {
             {isBlueTeamVisible && (
                 <div>
                     <h2 className="lg:text-3xl text-xl font-semibold text-center mb-2 text-blue-600 lg:mt-13">Blue Team</h2>
-                    <div className="flex justify-center items-center flex-wrap lg:gap-6 gap-3">
+                    <div className="flex justify-center items-center flex-wrap lg:gap-5 gap-3">
                         {blueTeam.map((champion, index) => (
                             <div key={index} className="text-center">
                                 <img src={getChampionImageUrl(champion, version)} alt={champion} className="lg:w-24 lg:h-24 w-14 h-14 object-cover mx-auto" />
@@ -106,16 +106,16 @@ export default function Results() {
 
             {isRedTeamVisible && isBlueTeamVisible && (
                 <div className="flex justify-center space-x-4 mt-8 lg:mt-16">
-                    <button onClick={handleRedraw} className="bg-purple-500 hover:bg-purple-600 text-white lg:text-3xl text-sm font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                    <button onClick={handleRedraw} className="bg-purple-500 hover:bg-purple-600 text-white lg:text-2xl text-sm font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                         Restart
                     </button>
-                    <button onClick={handleCopyRedTeamURL} className="bg-red-500 hover:bg-red-600 text-white lg:text-3xl text-xxs font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                    <button onClick={handleCopyRedTeamURL} className="bg-red-500 hover:bg-red-600 text-white lg:text-2xl text-xxs font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                         Copy RedURL
                     </button>
-                    <button onClick={handleCopyBlueTeamURL} className="bg-blue-500 hover:bg-blue-600 text-white lg:text-3xl text-xxs font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                    <button onClick={handleCopyBlueTeamURL} className="bg-blue-500 hover:bg-blue-600 text-white lg:text-2xl text-xxs font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                         Copy BlueURL
                     </button>
-                    <button onClick={handleCopyFullURL} className="bg-green-500 hover:bg-green-600 text-white lg:text-3xl text-xxs font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
+                    <button onClick={handleCopyFullURL} className="bg-green-500 hover:bg-green-600 text-white lg:text-2xl text-xxs font-bold lg:py-2 lg:px-4 py-1 px-2 rounded focus:outline-none focus:shadow-outline">
                         Copy FullURL
                     </button>
                 </div>

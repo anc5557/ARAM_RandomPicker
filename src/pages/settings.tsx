@@ -42,14 +42,8 @@ export default function Settings() {
             <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-2">
                 Number of champions on each team 
             </p>
-            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-5">
-                = (number of team members + 1) * number of dice
-            </p>
-            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl">
-                0 ≤ number of dice ≤ 2
-            </p>
-            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-14">
-                1 ≤ number of team members ≤ 5
+            <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-10">
+                = (team members + 1) * dice
             </p>
             <div className="flex justify-center space-x-6, mb-10">
                 <div className="sm:w-1/2 md:w-1/3 lg:w-1/4" style={{ margin: '0 10px' }}>
@@ -103,7 +97,7 @@ export default function Settings() {
             </div>
             <button
                 onClick={handleSubmit}
-                className="block mx-auto mt-20 w-60 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="block mx-auto mt-10 w-60 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
                 Start Random Pick
             </button>
