@@ -43,7 +43,7 @@ export default function Settings() {
                 Number of champions on each team 
             </p>
             <p className="sm:text-left sm:text-2sm md:text-2xl lg md:text-center lg:text-2xl mb-10">
-                = (team members + 1) * dice
+                = team members + team members * dice
             </p>
             <div className="flex justify-center space-x-6, mb-10">
                 <div className="sm:w-1/2 md:w-1/3 lg:w-1/4" style={{ margin: '0 10px' }}>
