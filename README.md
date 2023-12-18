@@ -4,17 +4,18 @@
 사설방에서는 주사위와 랜덤픽을 지원하지 않습니다.  
 이 웹사이트를 이용하면 주사위와 랜덤픽을 할 수 있습니다.
 
-이 서비스가 궁금하시다면 [mealchoice](https://aram-random-picker.vercel.app)를 클릭하세요.
+이 서비스가 궁금하시다면 [aram-random-picker](https://aram-random-picker.vercel.app)를 클릭하세요.
 
 ## 프로젝트 기간
 
-2023-11-14 ~ 2023-12-6
+2023-11-10 ~ 2023-11-14
 
 ## 기술 스택
 
 ![TypeScript](https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![vercel](https://img.shields.io/badge/vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ## 서비스 화면
 
@@ -53,3 +54,8 @@ Copy RedURL이나 Copy BlueURL를 누르면 해당 팀에 대한 챔피언만 �
 이렇게 redTeam=?, blueTeam=? 로 챔피언 이름을 넣어, 해당 url를 공유시에 같은 화면을 공유하도록함
 
 더 나아가 RedURL와 BlueURL로 분리 가능함.
+
+## 배포
+
+vercel을 통해 배포  
+<https://aram-random-picker.vercel.app>
